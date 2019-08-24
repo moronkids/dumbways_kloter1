@@ -43,13 +43,19 @@ function password($password)
 {
     $whiteListed = "\$\@\#\^\|\!\~\=\+\-\_\.";
     if(preg_match_all("/^[#a-zA-Z0-9](?=.*[a-z])(?=.*[A-Z]){8,}/", $password))
-    {
-    return "password valid";
+        if(strlen($password)<8){
+
+            return "password tidak valid";
+        }
+        else
+        {
+
+            return "password valid";
+        }
+    else{
+        return "password tidak valid";
     }
-    else
-    {
-    return "password tidak valid";
-    }
+
 
 }
 echo password('jakarta7');
