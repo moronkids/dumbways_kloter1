@@ -23,7 +23,7 @@ echo email('kukuruyuk@gmail');
 echo "\n";
 function username($username)
 {
-    if(preg_match("/[a-z]{8,}$/", $username))
+    if(preg_match("/[a-z]{8,8}$/", $username))
     {
         return "username valid";
     }
