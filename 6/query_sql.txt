@@ -1,0 +1,5 @@
+SELECT users.full_name, users.place_of_birth_id, cities.name, users.date_of_birth, users.phone_number, users.last_education, users.religion, hobbies.name
+FROM users
+JOIN cities on users.place_of_birth_id = cities.id
+JOIN hobbies on users.id = hobbies.id
+JOIN users_hobby on hobbies.id = users_hobby.hobby_id
